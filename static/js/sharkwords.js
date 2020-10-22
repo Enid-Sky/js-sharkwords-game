@@ -22,9 +22,10 @@ const createDivsForChars = (word) => {
 //
 const generateLetterButtons = () => {
   // Replace this with your code
-  //for()
+  for(const letter of ALPHABET) {
+    $('#letter-buttons').append(`<button>${letter}</button>`);
+  }
 };
-
 
 // Set the `disabled` property of `buttonEl` to `true.
 //
@@ -32,6 +33,8 @@ const generateLetterButtons = () => {
 //
 const disableLetterButton = (buttonEl) => {
   // Replace this with your code
+  const button = $(buttonEl).attr('disabled', "true");
+
 };
 
 
@@ -39,6 +42,15 @@ const disableLetterButton = (buttonEl) => {
 //
 const isLetterInWord = (letter) => {
   // Replace this with your code
+  if ($('#word-container').hasClass(`<div class="letter-box ${letter}"></div>`) !== undefined) {
+    //console.log("hello")
+    return true
+  }
+    
+//   $('div.nonexistent-class') === undefined;  // false
+
+ // $('#word-container').append(`<div class="letter-box ${letter}"></div>`);
+
 };
 
 
